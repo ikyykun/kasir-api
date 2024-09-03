@@ -13,4 +13,10 @@ class MenuController extends Controller
 
         return response()->json($menu   );
     }
+
+    public function getmenu(string $id){
+        $menu = Barang::findOrFail($id);
+
+        return response()->json($menu);
+    }
 }
